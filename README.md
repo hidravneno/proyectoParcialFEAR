@@ -65,8 +65,9 @@ src/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone [https://github.com/hidravneno/proyectoParcialFEAR]
-   cd proyectoParcial
+   git clone https://github.com/hidravneno/proyectoParcialFEAR
+   cd proyectoParcialFEAR
+
    ```
 
 2. **Instalar dependencias**
