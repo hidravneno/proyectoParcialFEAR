@@ -1,0 +1,21 @@
+<!-- src/app/components/dog-detail/dog-detail.component.html -->
+@if (dog) {
+  <div class="dog-detail-card">
+    <img [src]="dog.image" [alt]="dog.name" class="detail-image">
+    <div class="detail-content">
+      <h3 class="detail-title">{{ dog.name }}</h3>
+      <div class="detail-info">
+        <strong>Esperanza de vida:</strong> {{ dog.lifeExpectancy }}
+      </div>
+      <div class="detail-description">
+        <strong>Descripción:</strong>
+        <p>{{ dog.description }}</p>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="no-selection">
+    <i class="bi bi-arrow-left-circle" style="font-size: 48px; color: #ccc;"></i>
+    <p>Selecciona una raza de perro para ver sus detalles</p>
+  </div>
+}

@@ -1,0 +1,17 @@
+<!-- src/app/components/dog-card/dog-card.component.html -->
+<div 
+  class="dog-card" 
+  [class.selected]="isSelected"
+  (click)="onCardClick()"
+  (mouseenter)="onCardHover()"
+  (mouseleave)="onCardLeave()"
+>
+  <img 
+    [src]="dog.image" 
+    [alt]="dog.name" 
+    class="dog-image"
+    (error)="onImageError($event)"
+    loading="lazy"
+  >
+  <div class="dog-name">{{ dog.name }}</div>
+</div>

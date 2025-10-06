@@ -1,0 +1,95 @@
+/* src/app/components/dog-detail/dog-detail.component.css */
+.dog-detail-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  height: 100%;
+  overflow: hidden; /* Previene desbordamiento */
+  max-width: 100%; /* Asegura que no exceda el contenedor */
+}
+
+.detail-image {
+  width: calc(100% - 60px);
+  max-width: 100%; /* Previene desbordamiento */
+  height: 400px;
+  object-fit: scale-down;
+  object-position: center;
+  background-color: #f8f9fa;
+  margin: 30px;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.detail-image:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.detail-content {
+  padding: 30px;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1c0c2b;
+  padding-bottom: 10px;
+}
+
+.detail-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-info strong {
+  color: #1c0c2b;
+}
+
+.detail-description {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 15px;
+  background: rgba(248, 249, 250, 0.5);
+  border-radius: 12px;
+  border-left: 4px solid #1c0c2b;
+}
+
+.detail-description strong {
+  color: #1c0c2b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.detail-description p {
+  color: #666;
+  margin: 0;
+}
+
+.no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  text-align: center;
+  padding: 40px;
+  background: rgba(248, 249, 250, 0.3);
+  border-radius: 16px;
+  border: 2px dashed #ddd;
+}
+
+.no-selection p {
+  margin-top: 20px;
+  font-size: 18px;
+}

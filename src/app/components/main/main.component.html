@@ -1,0 +1,26 @@
+<!-- src/app/components/main/main.component.html -->
+<div class="main-container">
+  <div class="header-bar">
+    <h2>Hola: {{ username }}</h2>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="dogs-list">
+      <h3 class="section-title">Razas de Perros</h3>
+      <div class="cards-container">
+        @for (dog of dogs; track dog.id) {
+          <app-dog-card 
+            [dog]="dog"
+            [isSelected]="selectedDog?.id === dog.id"
+            (dogSelected)="onDogSelected($event)"
+          ></app-dog-card>
+        }
+      </div>
+    </div>
+
+    <div class="dog-detail">
+      <h3 class="section-title">Información Detallada</h3>
+      <app-dog-detail [dog]="selectedDog"></app-dog-detail>
+    </div>
+  </div>
+</div>

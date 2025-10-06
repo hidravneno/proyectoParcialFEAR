@@ -1,0 +1,64 @@
+/* src/app/components/dog-card/dog-card.component.css */
+.dog-card {
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  overflow: hidden; /* Para que el border-radius funcione correctamente */
+}
+
+.dog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dog-card:hover .dog-image {
+  transform: scale(1.03);
+  filter: brightness(1.08);
+}
+
+.dog-card:hover .dog-name {
+  color: #1c0c2b;
+}
+
+.dog-card.selected {
+  border: 3px solid #1c0c2b;
+  box-shadow: 0 5px 20px rgba(28, 12, 43, 0.3);
+}
+
+.dog-image {
+  width: 100%;
+  height: 180px;
+  object-fit: scale-down;
+  object-position: center;
+  flex-shrink: 0;
+  background-color: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.dog-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.dog-name {
+  padding: 15px 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease;
+}
